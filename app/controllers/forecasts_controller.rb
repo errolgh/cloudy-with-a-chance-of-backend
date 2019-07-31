@@ -16,9 +16,14 @@ class ForecastsController < ApplicationController
   end
 
   def create
-    # byebug
-    # puts "we tried to add a forecast"
+    forecast = Forecast.create(forecast_params)
+    render json: forecast
+  end
 
+  private
+
+  def forecast_params
+    params.require(:forecast).permit(:user_id, :zip_code, :date_range, :city_name, :days => [])
   end
 
 end
