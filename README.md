@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+-User
+t.string :username
+
+-Forecast
+t.integer :zipcode
+t.string :city_name
