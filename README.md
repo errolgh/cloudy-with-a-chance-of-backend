@@ -1,24 +1,5 @@
-# README
+Used the weather api to show the forecast using gif’s related to the weather condition of that day in a using a given zip code. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Used Rails with active record as the backend to store saved user data, and Javascript React to display data. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Semantic UI was used to style the app.
