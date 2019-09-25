@@ -1,11 +1,21 @@
 class UsersController < ApplicationController
   def show
-    if true
-      render json: User.find(params[:id])
-    end
-    #add authorization
+    render json: User.find(params[:id]).to_json(default), status: :accepted
   end
 
-  def create
+  private
+
+  def default
+    {
+      :include => {
+        :forecasts => {
+          :except => [:updated_at, :created_at],
+          :include => {
+            :user => {
+            }
+          }
+        }
+      }
+    }
   end
 end
